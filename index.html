@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"> <!-- codificación -->
+        <meta name="viewport" content="width=device-width">
+        <title>Resumen Tacho</title>
+        <meta name="description" content="Resumen de tacho ejemplo">
+
+        <!-- OPEN GRAPH -->
+
+        <meta property="og:title" content="Resumen de un developer">
+        <meta property="og:description" content="Resumen Tacho">
+        <meta property="og:image" content="./images/me.JPG">
+        <meta property="og:image:alt" content="una pic del developer">
+
+        <link rel="alternate" href="https://about.me/tacho" hreflang="es-GB">
+        <link rel="canonical" href="https://about.me/tacho">
+
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#d1d1d1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+        <style>
+            body {
+                background-color: #d1d1d1;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Resumen tacho</h1>
+
+            <h3>Hobbie</h3>
+
+            <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/II71HmV6lmI?si=8LNs6VSk0e0xIa_P"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+
+            <nav>
+                <a href="#skill">Experiencia</a>
+                <a href="#projects">Proyectos</a> <!-- enlaces internos -->
+                <a href="https://github.com/tanikazetacho" target="_blank" rel="noreferrer">GitHub</a>
+            </nav>
+        </header>
+
+        <dialog id="modal">
+            <h1>Un modal sin JS?</h1>
+            <p>¡nativo!</p>
+            <button id="closeModal">Cerrar</button>
+        </dialog>
+
+        <div>
+            <button id="showModal">Ver más</button>
+        </div>
+        <script>
+            window.showModal.addEventListener('click', () => {
+                window.modal.showModal()
+            })
+
+            window.closeModal.addEventListener('click', () => {
+                window.modal.close()
+            })
+        </script>
+
+
+        <main>
+            <p><strong>El tacho</strong> anda revisando lo basic de lo basic</p>
+
+            <h2 id="skill">Experiencia</h2>
+
+            <ul>
+                <li class="item">Gaia Design</li>
+                <li class="item">Madkting
+                <li class="item">SegundamanoMX</li>
+            </ul>
+
+            <a download href="./images/me.JPG">
+                <img
+                        id="image"
+                        title=me
+                        alt=me playing vinyl
+                        src="./images/me.JPG"
+                        width="60%"
+                        height="700px"
+                >
+            </a>
+
+            <h2 id="proyectos">Proyectos realizados</h2>
+
+            <aside>
+                <header>
+                    <h3>Tecnologias  que <span>rulean</span> </h3>
+                </header>
+                <ol type="1" reversed start="10">
+                    <li>Svelte</li>
+                    <li>Express</li>
+                    <li value="5">JavaScript</li>
+                    <li>Node.js</li>
+                    <li></li>
+                </ol>
+            </aside>
+
+            <button>
+                Este es un boton
+            </button>
+
+            <section>
+                <article>
+                    <header>
+                        <h4>La comunicada de software libre en la UTN</h4>
+                        <img style="width:40%; aspect-ratio:638/317;" loading="lazy" src="./images/IMG_1358.JPG"
+                             alt="Captura de pantalla de la página web de Tesla">
+                    </header>
+                    <p>
+                        fomentamos el free software y el opens y el uso de linux y gnu a los compañeros estudiantes
+                    </p>
+                    <footer>
+                        <small>Tecnologías utilizadas: GNU/LINUX, HTML, CSS, Javascript,</small>
+                    </footer>
+                </article>
+
+                <article>
+                    <header>
+                        <h4>Sitio Web Corporativo</h4>
+                    </header>
+                    <p>
+                        Desarrollo de un sitio web corporativo con una interfaz amigable y moderna.
+                    </p>
+                    <footer>
+                        <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                    </footer>
+                </article>
+            </section>
+
+            <section>
+                <h2>Preguntas frecuentes</h2>
+
+                <details open>
+                    <summary>¿Qué estudios tienes?</summary>
+                    <p>Estudié en la UTN una Ingeniería de Informática durante 5 años</p>
+                </details>
+
+                <details>
+                    <summary>¿Cuáles son tus hobbies?</summary>
+                    <p>musica en vinyl, bisicletas, fotografia, videojuegos, gadgets, audifonos, </p>
+                </details>
+
+                <details>
+                    <summary>¿Cuál es tu lenguaje favorito?</summary>
+                    <p>Con los años empiezo a ser mas fan de lenguajes mas tipados, regresando a los origenes de la UNI, me gusta mucho GO</p>
+                </details>
+            </section>
+
+            <section>
+                <h2>Formulario de contacto</h2>
+
+                <form method="post" action="/">
+                    <fieldset>
+                        <legend>Información personal</legend>
+
+                        <div>
+                            <label>Nombre:
+                                <input type="text" name="name" placeholder="Tacho Tanikaze" required>
+                            </label>
+                        </div>
+
+                        <label>Email:
+                            <input type="email" name="email" placeholder="tacho@gmail.com" required>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información adicional</legend>
+                        <div>
+                            <label>Teléfono:
+                                <input type="tel" name="phone" placeholder="tacho tanikaze" required pattern="[0-9]{2} [0-9]{4} [0-9]{4}">
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Otros</legend>
+
+                        <div>
+                            <label for="why">¿Por qué quieres contactar?</label>
+                            <select name="why" id="why">
+                                <option value="1">Trabajo</option>
+                                <option value="2">Duda</option>
+                                <option value="3">Más información</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="terms">¿Aceptas los términos?</label>
+                            <input type="checkbox" id="terms" name="terms" required>
+                        </div>
+
+                        <div>
+                            <datalist id="languages">
+                                <option value="JavaScript"></option>
+                                <option value="Python"></option>
+                                <option value="Go"></option>
+                                <option value="Elixir"></option>
+                            </datalist>
+                            <label>
+                                ¿Con qué lenguaje quieres que te ayude?
+                                <input list="languages" name="languages">
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <button>Enviar contacto</button>
+                </form>
+            </section>
+
+
+        </main>
+
+        <footer>
+            Copyright ©️ 2023 - tacho resumen ejemplo
+            <a href="mailto:braulio.anaranjo@gmail.com">Envíame un correo</a>
+            <a href="tel:+525614081830">Llamar por teléfono</a>
+            <a href="whatsapp://send?text=hi tacho">Chatear por whats</a>
+        </footer>
+
+
+
+
+            <!-- HTML Semantico -->
+
+    </body>
+</html>
